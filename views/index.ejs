@@ -1,0 +1,20 @@
+<!-- Including the header partial -->
+<%- include("partials/header.ejs")%> 
+
+<!-- Checking if bandName exists in locals -->
+<% if(locals.bandName) { %> 
+    <!-- Displaying the band name if it exists -->
+    <h1> <%=locals.bandName%></h1> 
+<% } else { %>
+    <!-- Displaying a message if bandName doesn't exist -->
+    <h1>Click to Generate Band Name </h1> 
+<% } %>
+
+<!-- Form for submitting to the /submit route via POST method -->
+<form action="/submit" method="POST"> 
+  <!-- Submit button to generate band name -->
+  <input type="submit" value="Generate Band Name"> 
+</form>
+
+<!-- Including the footer partial -->
+<%- include("partials/footer.ejs")%> 
